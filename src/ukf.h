@@ -67,6 +67,16 @@ public:
   ///* Sigma point spreading parameter
   double lambda_;
 
+  ///* the current NIS for radar
+  double NIS_radar_;
+
+  ///* the current NIS for laser
+  double NIS_laser_;
+
+  ///* Output NIS
+  std::ofstream NIS_laser_out_;
+  std::ofstream NIS_radar_out_;
+
 
   /**
    * Constructor
@@ -102,6 +112,12 @@ public:
    * @param meas_package The measurement at k+1
    */
   void UpdateRadar(MeasurementPackage meas_package);
+
+  /**
+   * Normalize the angle
+   * @param theta
+   */
+  void NormlizeAng(double &theta);
 };
 
 #endif /* UKF_H */
