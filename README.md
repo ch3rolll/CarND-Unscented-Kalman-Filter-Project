@@ -84,3 +84,8 @@ Below are some visualizations of the results for the Unscented Kalman Filter usi
 
 ![Result for Dataset 2](UKF_dataset2.png)
 
+### Potential Improvements
+1. Compare the result with Lidar-only and Radar-only.
+2. Continue to tune the parameters to get a better result
+3. Combine with NIS evaluation when tuning the parameters
+
